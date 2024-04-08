@@ -7,9 +7,9 @@ app.use(express.json());
 
 const cars = require('./src/cars.json');
 
-module.exports = async function (req, res) {
-    console.log("Called Cars")
-    console.log(cars)
-    res.json(cars);
-    console.log("Found it!")
+
+
+module.exports = async function (context, request) {
+    context.log('Http function was triggered.');
+    context.res(cars);
 };
