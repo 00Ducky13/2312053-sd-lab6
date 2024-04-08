@@ -11,6 +11,7 @@ const cars = require('./cars.json');
 //get all cars
 app.get('/cars', (req, res) => {
     res.json(cars);
+    console.log("Called Cars")
 });
 
 //get car by id
