@@ -14,6 +14,8 @@ app.get('/cars', (req, res) => {
     console.log("Called Cars")
 });
 
+
+
 //get car by id
 app.get('/cars/:id', (req, res) => {
     const id = req.params.id;
@@ -51,3 +53,7 @@ app.post('/cars', (req, res) => {
 app.listen(3001, () => {
     console.log('Server started at http://localhost:3001');
 });
+
+module.exports = async function (context, req) {
+    context.log('JavaScript HTTP trigger function processed a request.');
+};
