@@ -7,7 +7,7 @@ app.use(express.json());
 
 const cars = require('./src/cars.json');
 
-module.exports = async function (context, req) {
+module.exports = async function (req, res) {
     console.log("Called Cars")
     console.log(cars)
     res.json(cars);
